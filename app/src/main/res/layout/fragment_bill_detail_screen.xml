@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".screens.BillDetailScreenFragment">
+
+    <TextView
+        android:id="@+id/icBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_ios_new_24"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:text="Bill Detail"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvDateBillDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:drawablePadding="6dp"
+        android:padding="10dp"
+        android:drawableStart="@drawable/ic_baseline_calendar_month_brown_24"
+        android:background="@color/green0B8C7C"
+        android:text="Đơn hàng đã được mua vào ngày  : DD/ MM / YYY "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icBack" />
+
+    <TextView
+        android:id="@+id/tvIdBill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mã Đơn Hàng : HADBAJVDASDJASBDNAS"
+        android:textColor="@color/green419F7D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgIcShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateBillDetail" />
+
+    <TextView
+        android:id="@+id/tvPersonBill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name Buyer"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:textColor="#0B8C7C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvIdBill"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdBill" />
+
+    <TextView
+        android:id="@+id/tvAddressBill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Address : heaba,msndasmndas,nda,m"
+        android:textColor="#0B8C7C"
+        android:textSize="14sp"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPersonBill"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonBill" />
+
+    <TextView
+        android:id="@+id/tvPromotion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Khuyến Mãi"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/ic_baseline_ticket_24"
+        android:textColor="#0B8C7C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvAddressBill"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddressBill" />
+    <TextView
+        android:id="@+id/dssv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Danh sách sản phẩm"
+
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPromotion"
+        app:layout_constraintTop_toBottomOf="@+id/tvPromotion" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgIcShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@+id/tvIdBill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvIdBill" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rycProductDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dssv" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brownEDE3D3"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tvPriceBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pop_medium_font"
+            android:text="Price: 780$"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddToCart"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/boder_button_detail_yellow"
+            android:drawableEnd="@drawable/ic_add_cart"
+            android:paddingEnd="5dp"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

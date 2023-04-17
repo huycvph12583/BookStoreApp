@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_item_for_work"
+    android:padding="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="15dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imgItemNewBie"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNameBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pop_medium_font"
+            android:text="This is descrbe"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTitleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Paul Dolan, Daniel Kahneman"
+            android:textColor="#0B8C7C"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPriceBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="RS. 780"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_textview_item_newbie"
+                android:padding="10dp"
+                android:text="Design"
+                android:textColor="#F9C975" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_textview_item_newbie"
+                android:padding="10dp"
+                android:text="User Interface"
+                android:textColor="#F9C975" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
