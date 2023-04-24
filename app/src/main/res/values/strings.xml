@@ -5,5 +5,5 @@
     <string name="mViewAll"><u>view all</u></string>
     <string name="mAipscingconsectetur">Adipiscing consectetur odio mollis sit ac blandit libero pharetra in. Tellus sed et enim, magna sit. Et tincidunt ut interdum aliquam vitae bibendum ultrices vel sed. Fames sit laoreet mi nibh lorem. Odio cras et senectus quam eget quam ante. Nisl at nunc at purus.</string>
     <string name="mWellcome">Well Come Book Store</string>
-
+    <string name="position" translatable="false">position</string>
 </resources>
