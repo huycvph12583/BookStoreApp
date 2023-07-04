@@ -4,7 +4,7 @@
         android:id="@+id/homeScreenFragment"
         android:icon="@drawable/ic_home"
         android:title="Home"  />
-    searchScreenFragment
+
     <item
         android:id="@+id/searchScreenFragment"
         android:icon="@drawable/ic_search"
