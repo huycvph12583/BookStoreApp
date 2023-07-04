@@ -72,6 +72,7 @@ class LoginScreenFragment : BaseFragment<FragmentLoginScreenBinding>() {
     }
 
     private fun loginSucess(user: String) {
+        mainViewModel.userMutableLiveData = null
         Toast.makeText(context, "Login Sucess $user ", Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_loginScreenFragment_to_homeScreenFragment)
     }

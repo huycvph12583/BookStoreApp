@@ -43,7 +43,9 @@ class HomeScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         postponeEnterTransition()
+        pushDataToFB()
         getData()
         initView()
         lister()
@@ -113,9 +115,21 @@ class HomeScreenFragment : Fragment() {
 
     }
     // Push data to firebase
-//    private fun pushDataToFB() {
-//        for (item in listBook) {
-//            database.child(item.id).setValue(item)
-//        }
-//    }
+    private fun pushDataToFB() {
+        database = FirebaseDatabase.getInstance().getReference("Book")
+        listBook.add(Book("1","Dế mèn phưu lưu kí","Truyện",500,
+            "https://sachxuasaigon.com/wp-content/uploads/2020/01/De-men-phieu-luu-ky-1.jpg",
+            "Dế Mèn phiêu lưu ký là tác phẩm văn xuôi đặc sắc và nổi tiếng nhất của nhà văn Tô Hoài viết về loài vật," +
+                    " dành cho lứa tuổi thiếu nhi. Ban đầu truyện có tên là “Con dế mèn” (chính là ba chương đầu của truyện) do Nhà xuất bản Tân Dân, Hà Nội phát hành năm 1941. Sau đó, được sự ủng hộ nhiệt tình của nhân dân, Tô Hoài viết thêm truyện “Dế Mèn phiêu lưu ký” (là bảy chương cuối của truyện). Năm 1955, ông mới gộp hai chuyện vào với nhau để thành truyện “Dế mèn phiêu lưu ký” như ngày nay"))
+        listBook.add(Book("2","Cồn Dừa - Trạng quỳnh","Truyện Thiếu Nhi",300,
+            "https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_44197.jpg",
+            "Trạng Quỷnh là một bộ truyện tranh thiếu nhi nhiều tập của Việt Nam, tập truyện đầu tiên mang tên Sao sáng xứ Thanh được Nhà xuất bản Đồng Nai phát hành giữa tháng 6 năm 2003."))
+        listBook.add(Book("3","Ô long viện - Linh vật sống","Truyện Vui",300,
+            "https://salt.tikicdn.com/cache/750x750/media/catalog/product/i/m/img213.u2377.d20161126.t134823.160664.jpg",
+            "Trong lúc nóng giận, sư phụ Lông Mày Dài không kiềm chế được, đã lỡ mồm nói ra chuyện của Ê Đi Sờn, khiến bà góa Ê đau khổ ngất xỉu ngay lập tức. Mấy thầy trò còn chưa hết sững sờ khi biết Êphin đã bị Sa Khách Dương bắt cóc, thì tên Cẩu Tử đã xông vào cướp phần đầu Linh vật sống đi mất."))
+        for (item in listBook) {
+            database.child(item.id).setValue(item)
+        }
+        listBook = mutableListOf()
+    }
 }

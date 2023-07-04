@@ -58,7 +58,7 @@ class BookDetailScreenFragment : Fragment() {
         var testId = ""
         arguments?.apply {
             testId = this.get("idBook").toString()
-            Toast.makeText(requireContext(), "Id product is :$testId", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(requireContext(), "Id product is :$testId", Toast.LENGTH_SHORT).show()
         }
         database = FirebaseDatabase.getInstance().getReference("Book").child(testId)
         database.addValueEventListener(object : ValueEventListener {

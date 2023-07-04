@@ -106,7 +106,7 @@ class SigninScreenFragment : Fragment(), DatePickerDialog.OnDateSetListener {
             if (edtSignUpUsername.text.isNullOrEmpty()) {
                 edtSignUpUsername.error = "Username not empty"
             } else if (edtSignUpEmail.text.isNullOrEmpty()) {
-                edtSignUpEmail.error = "Username not empty"
+                edtSignUpEmail.error = "Email not empty"
             } else if (edtSignUpPasswords.text.isNullOrEmpty()) {
                 edtSignUpPasswords.error = "Pass not empty"
             } else if (edtAddress.text.isNullOrEmpty()) {
