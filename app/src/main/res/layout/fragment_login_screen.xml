@@ -80,7 +80,7 @@
                 android:background="@drawable/boder_edittext_login"
                 android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:drawablePadding="10dp"
-                android:hint="User name"
+                android:hint="Enter Email"
                 android:text="@={viewModelLogin.emailAddress}"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
